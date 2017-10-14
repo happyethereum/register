@@ -1,33 +1,25 @@
 {
-  "name": "happy_ens",
+  "name": "docker-dns-server",
   "version": "1.0.0",
-  "description": "Resolve *.eth domains in your browser with our dns server",
-  "main": "index.js",
+  "description": "A node dns server to resolve docker and others hostnames",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tcsiwula/happy_ens.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [
-    "ens",
+    "node",
     "dns",
-    "web3",
-    "ethereum",
-    "waterloo",
-    "hackathon"
+    "server",
+    "docker"
   ],
-  "author": "Tim Siwula, Eric Tu, Collin Chin, Harry Chan",
+  "author": "Elvis de Freitas",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/tcsiwula/happy_ens/issues"
-  },
-  "homepage": "https://github.com/tcsiwula/happy_ens#readme",
   "dependencies": {
-    "async": "^2.5.0",
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
+    "async": "^1.5.2",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "http-proxy": "^1.16.2",
     "native-dns": "^0.7.0"
   }
 }
