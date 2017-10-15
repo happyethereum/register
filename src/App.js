@@ -55,30 +55,10 @@ class App extends Component {
       console.log('Injected web3 detected.');
       // Instantiate contract once web3 provided.
 
-    //   this.setState({account: web3.eth.accounts[0], web3: web3})
-    //   this.setState({web3: web3})
       this.state.web3 = web3
     }
     this.instantiateContract();
 
-    /*
-    getWeb3
-    .then(results => {
-      console.log("results", results);
-
-      this.setState({
-        web3: results.web3,
-        account: results.web3.eth.accounts[0]
-      })
-
-      // Instantiate contract once web3 provided.
-      this.instantiateContract()
-    })
-    .catch(() => {
-      console.log('Error finding web3.')
-
-    })
-    */
   }
 
   instantiateContract() {
@@ -186,7 +166,7 @@ class App extends Component {
         <h1 className='fancy'>HAPPY - ENS</h1>
 				<h3 className = 'stepOne' > Step 1: Update your computers DNS server < /h3>
 				<p className = 'stepOneDetails' > * Set your computers DNS server < /p>
-				<p className = 'stepOneDetails' > to address 138.197 .150 .21 < /p>
+				<p className = 'stepOneDetails' > to address 138.197.151.44 < /p>
 				<h3 className = 'stepTwo' > Step 2: Register your.eth domain with HappyEthereum < /h3>
 				<p className = 'stepTwoDetails' > * Associate a mapping of your.eth domain < /p>
 				<p className = 'stepTwoDetails' > to a resource such as IPFS, URL, IP < /p>
