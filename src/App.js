@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import EnsRelayContract from '../build/contracts/EnsRelay.json'
-import getWeb3 from './utils/getWeb3'
+// import getWeb3 from './utils/getWeb3'
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import { Connect } from 'uport-connect'
@@ -53,13 +53,13 @@ class App extends Component {
       web3 = new Web3(web3.currentProvider)
 
       console.log('Injected web3 detected.');
-      this.setState({account: web3.eth.accounts[0]})
+      this.setState({account: web3.eth.accounts[0], web3:web3})
     } else {
       const uport = new Connect('happyENS');
       uport.requestCredentials().then((credentials)=>{
         // this.setState({credentials: credentials});
         // console.log(credentials);
-        this.setState({account: credentials.address})
+        this.setState({account: credentials.address, web3:web3})
       });
     }
 
@@ -161,7 +161,7 @@ class App extends Component {
   checkDomain(){
     console.log(this.state.getDomainName);
     var EnsRelayInstance
-    this.state.EnsRelay.at('0xae475c515df11b1b7760a2a9325c92da144baecf').then((instance) => {
+    this.state.EnsRelay.at('0x033adb802a332c79167036f81fc00933071452c9').then((instance) => {
       EnsRelayInstance = instance
 
       // Gets the IPFS Hash stored at that domainName
