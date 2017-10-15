@@ -58,13 +58,6 @@ class App extends Component {
     //   this.setState({account: web3.eth.accounts[0], web3: web3})
     //   this.setState({web3: web3})
       this.state.web3 = web3
-    } else {
-      const uport = new Connect('happyENS');
-      uport.requestCredentials().then((credentials)=>{
-        // this.setState({credentials: credentials});
-        // console.log(credentials);
-        this.setState({account: credentials.address, web3:web3})
-      });
     }
     this.instantiateContract();
 
@@ -191,8 +184,15 @@ class App extends Component {
           {this.state.account}
         </h1>
         <h1 className='fancy'>HAPPY - ENS</h1>
+				<h3 className = 'stepOne' > Step 1: Update your computers DNS server < /h3>
+				<p className = 'stepOneDetails' > * Set your computers DNS server < /p>
+				<p className = 'stepOneDetails' > to address 138.197 .150 .21 < /p>
+				<h3 className = 'stepTwo' > Step 2: Register your.eth domain with HappyEthereum < /h3>
+				<p className = 'stepTwoDetails' > * Associate a mapping of your.eth domain < /p>
+				<p className = 'stepTwoDetails' > to a resource such as IPFS, URL, IP < /p>
+
         <TextField
-          hintText="ethereum"
+          hintText="pegasys"
           floatingLabelText="ENS"
           type="text"
           id="domainName"
@@ -201,35 +201,15 @@ class App extends Component {
         <Label>.eth</Label>
         <br />
         <TextField
-          hintText="QmYDb8vr7GvxbbbirgJuU2TmZk2YbscAhxwRZ6D4hmVojB"
+          hintText="QmYDb8vr7GvxbbbirgJuU2TmZk2Y"
           floatingLabelText="IPFS Hash"
           type="text"
           id="ipfsHash"
           onChange={this.handleChange}
         />
         <br />
-        <div style={styles.submit}>
-          <RaisedButton label="Submit" primary={true} onClick={this.setDomain.bind(this)}/>
-        </div>
-        <h2 className='fancy'>ENS Hash</h2>
-        <div style={styles.content}>
-          <TextField
-            hintText="ethereum"
-            floatingLabelText="ENS"
-            type="text"
-            id="getDomainName"
-            onChange={this.handleChange}
-          />
-          <Label>.eth</Label>
-          <br />
-          <div style={styles.submit}>
-            <RaisedButton label="Get Hash" primary={true} onClick={this.checkDomain.bind(this)}/>
-          </div>
-        </div>
-
       </div>
     );
   }
 }
-
 export default App
