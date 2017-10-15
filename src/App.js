@@ -167,19 +167,19 @@ class App extends Component {
 
   checkDomain(){
 
-    // console.log(this.state.getDomainName);
-    // var EnsRelayInstance;
-    // console.log(this.state.EnsRelay);
-    // this.state.EnsRelay.at('0x033adb802a332c79167036f81fc00933071452c9').then((instance) => {
-    //   EnsRelayInstance = instance
-    //
-    //   // Gets the IPFS Hash stored at that domainName
-    //   var ipfsHash = EnsRelayInstance.get(this.state.getDomainName, {from: this.state.web3.eth.accounts[0]})
-    //   console.log(ipfsHash)
-    //   return true
-    // }).then((result) => {
-    //   console.log(result)
-    // })
+    console.log(this.state.getDomainName);
+    var EnsRelayInstance;
+    console.log(this.state.EnsRelay);
+    this.state.EnsRelay.at('0x033adb802a332c79167036f81fc00933071452c9').then((instance) => {
+      EnsRelayInstance = instance
+
+      // Gets the IPFS Hash stored at that domainName
+      var ipfsHash = EnsRelayInstance.get(this.state.getDomainName, {from: this.state.web3.eth.accounts[0]})
+      console.log(ipfsHash)
+      return true
+    }).then((result) => {
+      console.log(result)
+    })
   }
 
   render() {
