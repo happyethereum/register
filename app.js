@@ -4,6 +4,7 @@ let ui = require('./ui/index.js')
 let dns = require('native-dns');
 let server = dns.createServer();
 let async = require('async');
+const Eth = require('ethjs');
 
 const http = require('http');
 const httpProxy = require('http-proxy');
@@ -11,10 +12,73 @@ const http_proxy = httpProxy.createProxyServer({});
 
 const http_port = 80;
 
-const http_requestHandler = (request, response) => {
-  console.log("HTTP: ", request.url)
-	http_proxy.web(request, response, { target: `http://147.135.130.181/ipfs/QmT5NvUtoM5nWFfrQdVrFtvGfKFmG7AHE8P34isapyhCxX/` });
+const eth = new Eth(new Eth.HttpProvider('https://mainnet.infura.io/ensdns'));
 
+const ABI = [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_domain",
+          "type": "string"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_domain",
+          "type": "string"
+        },
+        {
+          "name": "_hash",
+          "type": "string"
+        }
+      ],
+      "name": "set",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "meh",
+          "type": "bool"
+        }
+      ],
+      "name": "LogSuccess",
+      "type": "event"
+    }
+  ]
+
+const Addr = "0xb9518C7fF807B7B1b30Ea05735237D739E27550d";
+
+const IPFSResolverContract = eth.contract(ABI).at(Addr);
+
+const http_requestHandler = (request, response) => {
+	let host_name =  request.headers.host;
+	let host_url = request.url ;
+	host_name = host_name.substring(0, host_name.length - 4)
+	console.log("HOST URL: ",host_name)
+	IPFSResolverContract.get(host_name).then((ipfs_hash)=>{
+		console.log("HASH");
+		console.log(ipfs_hash);
+
+		http_proxy.web(request, response, { target: `http://147.135.130.181/ipfs/${ipfs_hash[0]}/` });
+	});
 }
 
 const http_server = http.createServer(http_requestHandler);
@@ -85,7 +149,7 @@ function handleRequest(request, response) {
 			let record = {};
 			record.name = question.name;
 			record.ttl = record.ttl || 1800;
-			record.address = "127.0.0.1";
+			record.address = "138.197.151.44";
 			response.answer.push(dns["A"](record));
 		} else {
 			// forwarding host
@@ -100,3 +164,4 @@ function handleRequest(request, response) {
 }
 
 server.on('request', handleRequest);
+

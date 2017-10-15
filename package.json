@@ -18,6 +18,7 @@
   "dependencies": {
     "async": "^1.5.2",
     "body-parser": "^1.15.0",
+    "ethjs": "^0.2.8",
     "express": "^4.13.4",
     "http-proxy": "^1.16.2",
     "native-dns": "^0.7.0"
