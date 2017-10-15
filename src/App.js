@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import EnsRelayContract from '../build/contracts/EnsRelay.json'
+import EnsRelayContract from '../build/contracts/EnsRelayPoop.json'
 // import getWeb3 from './utils/getWeb3'
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -147,7 +147,7 @@ class App extends Component {
 
       // Get accounts.
       this.state.web3.eth.getAccounts((error, accounts) => {
-        this.state.EnsRelay.at('0x7c2e1876b8bC73Ad3571a9Ae07E034cBbD8B4386').then((instance) => {
+        this.state.EnsRelay.at('0xb9518C7fF807B7B1b30Ea05735237D739E27550d').then((instance) => {
           EnsRelayInstance = instance
 
           // Stores a given value, 5 by default.
@@ -170,7 +170,7 @@ class App extends Component {
     console.log(this.state.getDomainName);
     var EnsRelayInstance;
     console.log(this.state.EnsRelay);
-    this.state.EnsRelay.at('0x033adb802a332c79167036f81fc00933071452c9').then((instance) => {
+    this.state.EnsRelay.at('0xb9518C7fF807B7B1b30Ea05735237D739E27550d').then((instance) => {
       EnsRelayInstance = instance
 
       // Gets the IPFS Hash stored at that domainName

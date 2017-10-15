@@ -1,0 +1,736 @@
+{
+  "contractName": "EnsRelayPoop",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_domain",
+          "type": "string"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_domain",
+          "type": "string"
+        },
+        {
+          "name": "_hash",
+          "type": "string"
+        }
+      ],
+      "name": "set",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "meh",
+          "type": "bool"
+        }
+      ],
+      "name": "LogSuccess",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b5b6104b88061001f6000396000f300606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663693ec85e8114610048578063e942b51614610111575b600080fd5b341561005357600080fd5b61009960046024813581810190830135806020601f820181900481020160405190810160405281815292919060208401838380828437509496506101a695505050505050565b60405160208082528190810183818151815260200191508051906020019080838360005b838110156100d65780820151818401525b6020016100bd565b50505050905090810190601f1680156101035780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561011c57600080fd5b6101a460046024813581810190830135806020601f8201819004810201604051908101604052818152929190602084018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405281815292919060208401838380828437509496506102b895505050505050565b005b6101ae6103da565b6000826040518082805190602001908083835b602083106101e157805182525b601f1990920191602091820191016101c1565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102ab5780601f10610280576101008083540402835291602001916102ab565b820191906000526020600020905b81548152906001019060200180831161028e57829003601f168201915b505050505090505b919050565b60408051908101604052803373ffffffffffffffffffffffffffffffffffffffff168152602001828152506000836040518082805190602001908083835b6020831061031657805182525b601f1990920191602091820191016102f6565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040519081900390208151815473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff9190911617815560208201518160010190805161039b9291602001906103ec565b509050507f84c0720c14a2832bd33187d8657e64f9fa35079b62ab28a24309580037d14d526001604051901515815260200160405180910390a15b5050565b60206040519081016040526000815290565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061042d57805160ff191683800117855561045a565b8280016001018555821561045a579182015b8281111561045a57825182559160200191906001019061043f565b5b5061046792915061046b565b5090565b61048991905b808211156104675760008155600101610471565b5090565b905600a165627a7a723058204262a5ac1eb66bdbe2a660cc2e16993d9bbefc847b9866fed729f173e84414f30029",
+  "deployedBytecode": "0x606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663693ec85e8114610048578063e942b51614610111575b600080fd5b341561005357600080fd5b61009960046024813581810190830135806020601f820181900481020160405190810160405281815292919060208401838380828437509496506101a695505050505050565b60405160208082528190810183818151815260200191508051906020019080838360005b838110156100d65780820151818401525b6020016100bd565b50505050905090810190601f1680156101035780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561011c57600080fd5b6101a460046024813581810190830135806020601f8201819004810201604051908101604052818152929190602084018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405281815292919060208401838380828437509496506102b895505050505050565b005b6101ae6103da565b6000826040518082805190602001908083835b602083106101e157805182525b601f1990920191602091820191016101c1565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102ab5780601f10610280576101008083540402835291602001916102ab565b820191906000526020600020905b81548152906001019060200180831161028e57829003601f168201915b505050505090505b919050565b60408051908101604052803373ffffffffffffffffffffffffffffffffffffffff168152602001828152506000836040518082805190602001908083835b6020831061031657805182525b601f1990920191602091820191016102f6565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040519081900390208151815473ffffffffffffffffffffffffffffffffffffffff191673ffffffffffffffffffffffffffffffffffffffff9190911617815560208201518160010190805161039b9291602001906103ec565b509050507f84c0720c14a2832bd33187d8657e64f9fa35079b62ab28a24309580037d14d526001604051901515815260200160405180910390a15b5050565b60206040519081016040526000815290565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061042d57805160ff191683800117855561045a565b8280016001018555821561045a579182015b8281111561045a57825182559160200191906001019061043f565b5b5061046792915061046b565b5090565b61048991905b808211156104675760008155600101610471565b5090565b905600a165627a7a723058204262a5ac1eb66bdbe2a660cc2e16993d9bbefc847b9866fed729f173e84414f30029",
+  "sourceMap": "99:946:0:-;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "99:946:0:-;;;;;;;;;;;;;;;;;;;;;;;908:134;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;908:134:0;;-1:-1:-1;908:134:0;;-1:-1:-1;;;;;;908:134:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;8:100;52:2;45:3;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;511:278:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;511:278:0;;-1:-1:-1;511:278:0;;-1:-1:-1;;;;;;511:278:0;;;908:134;977:6;;:::i;:::-;1008:8;1017:7;1008:17;;;;;;;;;;;;;36:153:-1;66:2;58;;36:153;;182:3;176:5;171:3;164:6;36:153;-1:-1;;139:3;;;;98:2;89:3;;;;114;36:153;;;274:1;267:3;263:2;259:3;254;250;246;315:4;311:3;305;299:5;295:3;356:4;350:3;344:5;340:3;389:7;380;377:2;372:3;365:6;3:399;;;;;;;;;;;;;;;;;;;;;;;;1008:26:0;;1001:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;908:134;;;;:::o;511:278::-;673:81;;;;;;;;;703:10;673:81;;;;;;738:5;673:81;;;653:8;662:7;653:17;;;;;;;;;;;;;36:153:-1;66:2;58;;36:153;;182:3;176:5;171:3;164:6;36:153;-1:-1;;139:3;;;;98:2;89:3;;;;114;36:153;;;274:1;267:3;263:2;259:3;254;250;246;315:4;311:3;305;299:5;295:3;356:4;350:3;344:5;340:3;389:7;380;377:2;372:3;365:6;3:399;;;;;;;;;;;;;;;;;;;;;;;;;653:101:0;;;;-1:-1:-1;;653:101:0;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;765:16;776:4;765:16;;;;;;;;;;;;;;;;511:278;;;:::o;99:946::-;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;99:946:0;;;-1:-1:-1;99:946:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.13;\n\n/// @title EnsRelay contract that maps ens domain names to ipfs hashes\n\n contract EnsRelayPoop {\n\n     mapping (string => Website) websites;\n\n     struct Website {\n         address owner;\n         string ipfsHash;\n     }\n\n     event LogSuccess(bool meh);\n\n     /// @dev sets ens domain name to struct of domain owner and ipfs hash\n     /// @param _domain ens domain name ex: vitalik (no \".eth\" !)\n     /// @param _hash ipfs hash of website\n     /// `msg.sender = owner of domain`\n     function set(string _domain, string _hash) public {\n\n        // if the owner of the ENS domain is the function caller, store the hash\n        websites[_domain] = Website({\n            owner : msg.sender,\n            ipfsHash : _hash\n        });\n\n        LogSuccess(true);\n     }\n\n    /// @dev gets ipfsHash from ens domain name\n    /// @param _domain ens domain name\n    /// @return ipfsHash\n     function get(string _domain)\n     public\n     constant\n     returns (string)\n     {\n         return websites[_domain].ipfsHash;\n     }\n }\n",
+  "sourcePath": "/Users/collinchin/Desktop/register/contracts/EnsRelayPoop.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/collinchin/Desktop/register/contracts/EnsRelayPoop.sol",
+      "exportedSymbols": {
+        "EnsRelayPoop": [
+          50
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".13"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": "@title EnsRelay contract that maps ens domain names to ipfs hashes",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            50
+          ],
+          "name": "EnsRelayPoop",
+          "scope": 51
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "websites",
+              "scope": 50,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(string memory => struct EnsRelayPoop.Website storage ref)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(string memory => struct EnsRelayPoop.Website storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "138:6:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Website",
+                      "referencedDeclaration": 10,
+                      "type": "struct EnsRelayPoop.Website storage pointer"
+                    },
+                    "id": 3,
+                    "name": "UserDefinedTypeName",
+                    "src": "148:7:0"
+                  }
+                ],
+                "id": 4,
+                "name": "Mapping",
+                "src": "129:27:0"
+              }
+            ],
+            "id": 5,
+            "name": "VariableDeclaration",
+            "src": "129:36:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "EnsRelayPoop.Website",
+              "name": "Website",
+              "scope": 50,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "owner",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "199:7:0"
+                  }
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "199:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "ipfsHash",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "223:6:0"
+                  }
+                ],
+                "id": 9,
+                "name": "VariableDeclaration",
+                "src": "223:15:0"
+              }
+            ],
+            "id": 10,
+            "name": "StructDefinition",
+            "src": "173:73:0"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "name": "LogSuccess"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "meh",
+                      "scope": 14,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 11,
+                        "name": "ElementaryTypeName",
+                        "src": "270:4:0"
+                      }
+                    ],
+                    "id": 12,
+                    "name": "VariableDeclaration",
+                    "src": "270:8:0"
+                  }
+                ],
+                "id": 13,
+                "name": "ParameterList",
+                "src": "269:10:0"
+              }
+            ],
+            "id": 14,
+            "name": "EventDefinition",
+            "src": "253:27:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "set",
+              "payable": false,
+              "scope": 50,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_domain",
+                      "scope": 36,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 15,
+                        "name": "ElementaryTypeName",
+                        "src": "524:6:0"
+                      }
+                    ],
+                    "id": 16,
+                    "name": "VariableDeclaration",
+                    "src": "524:14:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_hash",
+                      "scope": 36,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 17,
+                        "name": "ElementaryTypeName",
+                        "src": "540:6:0"
+                      }
+                    ],
+                    "id": 18,
+                    "name": "VariableDeclaration",
+                    "src": "540:12:0"
+                  }
+                ],
+                "id": 19,
+                "name": "ParameterList",
+                "src": "523:30:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 20,
+                "name": "ParameterList",
+                "src": "561:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct EnsRelayPoop.Website storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct EnsRelayPoop.Website storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 5,
+                                  "type": "mapping(string memory => struct EnsRelayPoop.Website storage ref)",
+                                  "value": "websites"
+                                },
+                                "id": 21,
+                                "name": "Identifier",
+                                "src": "653:8:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 16,
+                                  "type": "string memory",
+                                  "value": "_domain"
+                                },
+                                "id": 22,
+                                "name": "Identifier",
+                                "src": "662:7:0"
+                              }
+                            ],
+                            "id": 23,
+                            "name": "IndexAccess",
+                            "src": "653:17:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                "owner",
+                                "ipfsHash"
+                              ],
+                              "type": "struct EnsRelayPoop.Website memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "type(struct EnsRelayPoop.Website storage pointer)",
+                                  "value": "Website"
+                                },
+                                "id": 24,
+                                "name": "Identifier",
+                                "src": "673:7:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 110,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 25,
+                                    "name": "Identifier",
+                                    "src": "703:3:0"
+                                  }
+                                ],
+                                "id": 26,
+                                "name": "MemberAccess",
+                                "src": "703:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 18,
+                                  "type": "string memory",
+                                  "value": "_hash"
+                                },
+                                "id": 27,
+                                "name": "Identifier",
+                                "src": "738:5:0"
+                              }
+                            ],
+                            "id": 28,
+                            "name": "FunctionCall",
+                            "src": "673:81:0"
+                          }
+                        ],
+                        "id": 29,
+                        "name": "Assignment",
+                        "src": "653:101:0"
+                      }
+                    ],
+                    "id": 30,
+                    "name": "ExpressionStatement",
+                    "src": "653:101:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 14,
+                              "type": "function (bool) constant",
+                              "value": "LogSuccess"
+                            },
+                            "id": 31,
+                            "name": "Identifier",
+                            "src": "765:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 32,
+                            "name": "Literal",
+                            "src": "776:4:0"
+                          }
+                        ],
+                        "id": 33,
+                        "name": "FunctionCall",
+                        "src": "765:16:0"
+                      }
+                    ],
+                    "id": 34,
+                    "name": "ExpressionStatement",
+                    "src": "765:16:0"
+                  }
+                ],
+                "id": 35,
+                "name": "Block",
+                "src": "561:228:0"
+              }
+            ],
+            "id": 36,
+            "name": "FunctionDefinition",
+            "src": "511:278:0"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "get",
+              "payable": false,
+              "scope": 50,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_domain",
+                      "scope": 49,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 37,
+                        "name": "ElementaryTypeName",
+                        "src": "921:6:0"
+                      }
+                    ],
+                    "id": 38,
+                    "name": "VariableDeclaration",
+                    "src": "921:14:0"
+                  }
+                ],
+                "id": 39,
+                "name": "ParameterList",
+                "src": "920:16:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 49,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 40,
+                        "name": "ElementaryTypeName",
+                        "src": "977:6:0"
+                      }
+                    ],
+                    "id": 41,
+                    "name": "VariableDeclaration",
+                    "src": "977:6:0"
+                  }
+                ],
+                "id": 42,
+                "name": "ParameterList",
+                "src": "976:8:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 42
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "ipfsHash",
+                          "referencedDeclaration": 9,
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "struct EnsRelayPoop.Website storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 5,
+                                  "type": "mapping(string memory => struct EnsRelayPoop.Website storage ref)",
+                                  "value": "websites"
+                                },
+                                "id": 43,
+                                "name": "Identifier",
+                                "src": "1008:8:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 38,
+                                  "type": "string memory",
+                                  "value": "_domain"
+                                },
+                                "id": 44,
+                                "name": "Identifier",
+                                "src": "1017:7:0"
+                              }
+                            ],
+                            "id": 45,
+                            "name": "IndexAccess",
+                            "src": "1008:17:0"
+                          }
+                        ],
+                        "id": 46,
+                        "name": "MemberAccess",
+                        "src": "1008:26:0"
+                      }
+                    ],
+                    "id": 47,
+                    "name": "Return",
+                    "src": "1001:33:0"
+                  }
+                ],
+                "id": 48,
+                "name": "Block",
+                "src": "990:52:0"
+              }
+            ],
+            "id": 49,
+            "name": "FunctionDefinition",
+            "src": "908:134:0"
+          }
+        ],
+        "id": 50,
+        "name": "ContractDefinition",
+        "src": "99:946:0"
+      }
+    ],
+    "id": 51,
+    "name": "SourceUnit",
+    "src": "0:1046:0"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2017-10-15T09:29:21.423Z"
+}
