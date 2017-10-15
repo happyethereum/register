@@ -13,8 +13,6 @@ import './AbstractENS.sol';
          string ipfsHash;
      }
 
-     modifier isOwner (address owner) {require(msg.sender == owner); _;}
-
      event LogNameHash(address accountAddress);
 
      event LogSuccess(bool meh);
@@ -65,11 +63,9 @@ import './AbstractENS.sol';
     /// @dev gets ipfsHash from ens domain name
     /// @param _domain ens domain name
     /// @return ipfsHash
-    /// `msg.sender = owner of domain`
      function get(string _domain)
      public
      constant
-     isOwner(websites[_domain].owner)
      returns (string)
      {
          return websites[_domain].ipfsHash;

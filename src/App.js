@@ -48,12 +48,16 @@ class App extends Component {
     var web3 = window.web3
 
     // Checking if Web3 has been injected by the browser (Mist/MetaMask)
-    if (typeof web3 !== 'undefined') {
+    if (typeof web3 !== 'undefined' && typeof web3 !== null) {
       // Use Mist/MetaMask's provider.
       web3 = new Web3(web3.currentProvider)
 
       console.log('Injected web3 detected.');
-      this.setState({account: web3.eth.accounts[0], web3:web3})
+      // Instantiate contract once web3 provided.
+
+    //   this.setState({account: web3.eth.accounts[0], web3: web3})
+    //   this.setState({web3: web3})
+      this.state.web3 = web3
     } else {
       const uport = new Connect('happyENS');
       uport.requestCredentials().then((credentials)=>{
@@ -62,6 +66,7 @@ class App extends Component {
         this.setState({account: credentials.address, web3:web3})
       });
     }
+    this.instantiateContract();
 
     /*
     getWeb3
@@ -95,8 +100,10 @@ class App extends Component {
 
     const contract = require('truffle-contract')
     const EnsRelay = contract(EnsRelayContract)
+
     EnsRelay.setProvider(this.state.web3.currentProvider)
-    // console.log(EnsRelay.at('0xae475c515df11b1b7760a2a9325c92da144baecf'))
+
+    console.log(EnsRelay.at('0x7c2e1876b8bC73Ad3571a9Ae07E034cBbD8B4386'))
     this.setState({EnsRelay : EnsRelay})
     // Declaring this for later so we can chain functions on SimpleStorage.
     // var EnsRelayInstance
@@ -140,7 +147,7 @@ class App extends Component {
 
       // Get accounts.
       this.state.web3.eth.getAccounts((error, accounts) => {
-        this.state.EnsRelay.at('0x033adb802a332c79167036f81fc00933071452c9').then((instance) => {
+        this.state.EnsRelay.at('0x7c2e1876b8bC73Ad3571a9Ae07E034cBbD8B4386').then((instance) => {
           EnsRelayInstance = instance
 
           // Stores a given value, 5 by default.
@@ -159,16 +166,20 @@ class App extends Component {
   }
 
   checkDomain(){
-    console.log(this.state.getDomainName);
-    var EnsRelayInstance
-    this.state.EnsRelay.at('0x033adb802a332c79167036f81fc00933071452c9').then((instance) => {
-      EnsRelayInstance = instance
 
-      // Gets the IPFS Hash stored at that domainName
-      return EnsRelayInstance.get(this.state.getDomainName, {from: this.state.web3.eth.accounts[0]})
-    }).then((result) => {
-      console.log(result)
-    })
+    // console.log(this.state.getDomainName);
+    // var EnsRelayInstance;
+    // console.log(this.state.EnsRelay);
+    // this.state.EnsRelay.at('0x033adb802a332c79167036f81fc00933071452c9').then((instance) => {
+    //   EnsRelayInstance = instance
+    //
+    //   // Gets the IPFS Hash stored at that domainName
+    //   var ipfsHash = EnsRelayInstance.get(this.state.getDomainName, {from: this.state.web3.eth.accounts[0]})
+    //   console.log(ipfsHash)
+    //   return true
+    // }).then((result) => {
+    //   console.log(result)
+    // })
   }
 
   render() {
