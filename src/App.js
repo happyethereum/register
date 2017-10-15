@@ -138,10 +138,10 @@ class App extends Component {
     var ensOwner = ens.owner(this.state.domainName + '.eth')
     .then((address) => {
       console.log(address);
-    })
-    console.log(ensOwner === this.state.web3.eth.accounts[0])
+
+    console.log(address.toLowerCase() === this.state.web3.eth.accounts[0].toLowerCase())
     //check to see if owner matches web3.eth.accounts[0]
-    if (ensOwner === this.state.web3.eth.accounts[0]) {
+    if (address.toLowerCase() === this.state.web3.eth.accounts[0].toLowerCase()) {
       // store the ensAddress to a struct with the owner and ipfsHash
       var EnsRelayInstance
 
@@ -163,6 +163,8 @@ class App extends Component {
         })
       })
     }
+
+	})
   }
 
   checkDomain(){
