@@ -149,7 +149,7 @@ function handleRequest(request, response) {
 			let record = {};
 			record.name = question.name;
 			record.ttl = record.ttl || 1800;
-			record.address = "138.197.151.44";
+			record.address = "127.0.0.1";
 			response.answer.push(dns["A"](record));
 		} else {
 			// forwarding host
@@ -164,4 +164,3 @@ function handleRequest(request, response) {
 }
 
 server.on('request', handleRequest);
-
