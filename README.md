@@ -4,7 +4,7 @@
 
 #### Step 1: Update your computers DNS server
 
-- Set your computers DNS server [video](https://github.com/tcsiwula/happy_ens/blob/master/h-ens.gif) to address:***138.197.150.21***
+- Set your computers DNS server [video](https://github.com/tcsiwula/happy_ens/blob/master/h-ens.gif) to address:***138.197.151.44***
 
 #### Step 2: Register your eth domain with our smart contract
 
