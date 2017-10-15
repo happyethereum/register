@@ -140,7 +140,7 @@ class App extends Component {
 
       // Get accounts.
       this.state.web3.eth.getAccounts((error, accounts) => {
-        this.state.EnsRelay.at('0xae475c515df11b1b7760a2a9325c92da144baecf').then((instance) => {
+        this.state.EnsRelay.at('0x033adb802a332c79167036f81fc00933071452c9').then((instance) => {
           EnsRelayInstance = instance
 
           // Stores a given value, 5 by default.
