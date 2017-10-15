@@ -208,8 +208,14 @@ class App extends Component {
           onChange={this.handleChange}
         />
         <br />
+        <div style={styles.submit}>
+          <RaisedButton label="Submit" primary={true} onClick={this.setDomain.bind(this)}/>
+        </div>
+
+
       </div>
     );
   }
 }
+
 export default App
