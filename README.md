@@ -8,7 +8,7 @@
 
 #### Step 2: Register your eth domain with our smart contract
 
-- Go to [happyethereum.com/register](www.happyethereum.com/register) and
+- Go to [happyethereum.com](www.happyethereum.com) and
 associate a mapping of your eth domain to an ipfs resource resolves to your website*
 
 ![mac gif tutorial](h-ens.gif)
