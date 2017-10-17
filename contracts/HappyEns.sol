@@ -19,15 +19,6 @@ import './AbstractENS.sol';
 
      event LogNewRegister(address ensOwner, string domain, string ipfsHash);
 
-     modifier only_owner(string subnode) {
-         var node = sha3(rootNode, subnode);
-         var currentOwner = ens.owner(node);
-
-         if (currentOwner != 0 && currentOwner != msg.sender) revert();
-
-         _;
-     }
-
      /// @dev Constructor
      /// @param ensAddr address of deployed ens contracts
      function HappyEns(AbstractENS ensAddr) public {
@@ -41,16 +32,18 @@ import './AbstractENS.sol';
      /// `msg.sender = owner of domain`
      function set(string _domain, string _hash)
      public
-     only_owner(_domain)
      {
         /*address ensAddress = 0x314159265dD8dbb310642f98f50C066173C1259b;*/
-
+        var node = sha3(rootNode, _domain);
+        var currentOwner = ens.owner(node);
         // if the owner of the ENS domain is the function caller, store the hash
-        websites[_domain] = Website({
-            owner : msg.sender,
-            ipfsHash : _hash
-        });
-        LogNewRegister(msg.sender, _domain, _hash);
+        if (currentOwner == msg.sender) {
+            websites[_domain] = Website({
+                owner : msg.sender,
+                ipfsHash : _hash
+            });
+            LogNewRegister(msg.sender, _domain, _hash);
+        }
      }
 
      /// @dev gets external account from ens domain name
@@ -59,8 +52,7 @@ import './AbstractENS.sol';
      function getOwner(string _domain) public constant returns(address){
          //Hardcoded NameHash of .eth
          bytes32 node = sha3(rootNode, sha3(_domain));
-         address ensOwner = ens.owner(node);
-         return ensOwner;
+         return ens.owner(node);
      }
 
     /// @dev gets ipfsHash from ens domain name
